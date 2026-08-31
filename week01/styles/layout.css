@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    font-family: Arial 'Franklin Gothic Medium', 'Arial Narrow';
+    grid-template: auto 1fr auto / 70% auto;
+}
+
+header{
+    grid-column: 1/4;
+    /* font-size: 0.8rem; */
+    background-color: rgb(100, 99, 99);
+}
+
+h1{
+    padding: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: rgb(248, 248, 248);
+}
+
+.navigation{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    background-color: rgb(20, 20, 20);
+    padding: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(248, 248, 248);
+}
+
+footer{
+    grid-column: 1/4;
+    text-align: center;
+    padding: 2rem;
+    height: 2rem;
+    color: rgb(248, 248, 248);
+    background-color: rgb(100, 99, 99);
+}
+
+main{
+    grid-column: 1/2;
+    padding: 1rem;
+    background-color: rgb(194, 194, 194);
+}
+
+aside{
+    grid-column: 2/4;
+    padding: 1rem;
+}

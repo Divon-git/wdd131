@@ -6,13 +6,12 @@
 body{
     display: grid;
     height: 100vh;
-    font-family: Arial 'Franklin Gothic Medium', 'Arial Narrow';
+    font-family: Arial, 'Arial Narrow';
     grid-template: auto 1fr auto / 70% auto;
 }
 
 header{
     grid-column: 1/4;
-    /* font-size: 0.8rem; */
     background-color: rgb(100, 99, 99);
 }
 

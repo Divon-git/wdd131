@@ -87,6 +87,7 @@ console.log(temples[0].templeName);
 const navigation = document.querySelector(".navMenu");
 const hambugerMenu = document.querySelector("#menu");
 const navLinks = document.querySelectorAll(".navMenu a");
+const headerText = document.getElementById("page-header")
 
 hambugerMenu.addEventListener("click", () => {
     navigation.classList.toggle("open");
@@ -158,6 +159,7 @@ function generateCards(templelist){
  console.log(smallTemples);
  
  generateCards(temples);
+ headerText.textContent = "Home"
 
  navLinks.forEach(function(links){
   links.addEventListener("click", function(event){
@@ -166,22 +168,27 @@ function generateCards(templelist){
     switch (links.textContent) {
       case "Home":
         generateCards(temples);
+        headerText.textContent = "Home"
         break;
       
       case "Old":
         generateCards(oldTemples);
+        headerText.textContent = "Old Temples of the Church of Jesus Christ of Latter-Day Saints"
         break;
       
       case "New":
         generateCards(newTemples);
+        headerText.textContent = "New Temples of the Church of Jesus Christ of Latter-Day Saints"
         break;
 
       case "Large":
         generateCards(largeTemples);
+        headerText.textContent = "Large Temples"
         break;
 
       case "Small":
         generateCards(smallTemples);
+        headerText.textContent = "Small Temples"
         break;
     }
   });

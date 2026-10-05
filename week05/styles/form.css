@@ -9,19 +9,20 @@ body {
     background-color: #f4f4f4;
 }
 
-header, footer {
-    text-align: center;
-    padding: 1rem;
+header {
     background-color: #333;
     color: white;
     text-align: center;
+    padding: 1.5rem;
 }
 
 footer {
+    background-color: #333;
+    color: white;
     margin-top: 2rem;
- 
+    padding: 1rem;
+    text-align: center;
 }
-
 
 
 main {
@@ -63,12 +64,6 @@ textarea {
     resize: vertical;
 }
 
-input[type="submit"] {
-    padding: 0.75rem;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
 
 fieldset strong{
     margin-bottom: 10px;
@@ -92,16 +87,14 @@ legend {
     font-weight: bold;
 }
 
-.rating {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-}
 
 .rating {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
 }
 
 .rating label {
@@ -119,10 +112,6 @@ legend {
 .rating label:has(input:checked) span {
     color: gold;
 }
-
-/* .rating input:checked + span {
-    color: gold;
-} */
 
 input[type="submit"] {
     padding: 0.75rem;

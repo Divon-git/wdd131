@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    margin-top: 2rem;
+ 
+}
+
+
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+     background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+form > label {
+    font-weight: bold;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #777;
+    border-radius: 5px;
+}
+
+
+textarea:focus {
+    outline: 2px solid #333;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+fieldset strong{
+    margin-bottom: 10px;
+}
+strong span {
+    font-style: italic;
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+legend {
+    font-weight: bold;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.rating label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.rating span {
+    font-size: 2rem;
+}
+
+.rating label:has(input:checked) span {
+    color: gold;
+}
+
+/* .rating input:checked + span {
+    color: gold;
+} */
+
+input[type="submit"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background-color: #b4b4b4;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+    color: #ffff;
+}
+
+@media screen and (min-width: 600px) {
+
+    main {
+        max-width: 700px;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+}

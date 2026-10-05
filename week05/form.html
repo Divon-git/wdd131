@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive product review form designed with good usability and accessibility principles.">
+    <meta name="author" content="Divine Kalu">
+    <title>Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form  method="get" action="review.html">
+            <label for="product">Product Name</label>
+            <select name="product" id="product" required>
+                <option value="" disabled selected>Select a Product...</option>
+            </select>
+            
+           <fieldset class="rating">
+                <legend>Overall Rating</legend>
+
+                <label for="rating1">
+                    <span>★</span>
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                </label>
+
+                <label for="rating2">
+                    <span>★★</span>
+                    <input type="radio" id="rating2" name="rating" value="2">
+                </label>
+
+                <label for="rating3">
+                    <span>★★★</span>
+                    <input type="radio" id="rating3" name="rating" value="3">
+                </label>
+
+                <label for="rating4">
+                    <span>★★★★</span>
+                    <input type="radio" id="rating4" name="rating" value="4">
+                </label>
+
+                <label for="rating5">
+                    <span>★★★★★</span>
+                    <input type="radio" id="rating5" name="rating" value="5">
+                </label>
+            </fieldset>
+
+            <label for="installation">Date of Installation</label>
+            <input type="date" id="installation" name="installation" required>
+
+            <fieldset class="checkbox">  
+                <legend>Useful Features</legend>
+                <strong>
+                    Which features did you find useful in the product?<br><span>(Check all that apply)</span>
+                </strong>
+                <label>
+                    <input type="checkbox" id="easy" name="features" value="easy">
+                    Easy to use
+                </label>
+
+                <label>
+                    <input type="checkbox" id="durable" name="features" value="durable">
+                    Durable
+                </label>
+
+                <label>
+                    <input type="checkbox" id="value" name="features" value="value">
+                    Good Value
+                </label>
+
+                <label>
+                    <input type="checkbox" id="reliable" name="features" value="reliable">
+                    Reliable
+                </label>
+            </fieldset>
+
+            <label for="review">Written Review</label>
+            <textarea id="review" name="review"></textarea>
+
+            <label for="username">Name</label>
+            <input type="text" id="username" name="username">
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </main> 
+    
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🍓 Divine Kalu 🍓 Nigeria</p>
+        <p id="lastModified"></p>
+    </footer> 
+</body>
+</html>

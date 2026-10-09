@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plan your flooring project with Tile Settings. Explore tile types and sizes, measure your room, and calculate your tile requirements.">
+    <meta name="author" content="Divine kalu">
+    <title>Tile Settings | Plan Your Floor with Confidence</title>
+
+    <link rel="stylesheet" href="styles/mobile-view.css">
+    <link rel="stylesheet" href="styles/desktop-view.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&display=swap" rel="stylesheet">
+
+    <script src="scripts/tile-settings.js" defer></script>
+</head>
+<body>
+    <!-- 1 heading  -->
+    <header>
+        <div class="headNav">  
+            <a id="title" href="index.html"> 
+                <img class="logo-image" src="images/logo-image.svg" alt="Tile settings logo image, in svg format">
+                <h1>Tile Settings</h1>
+            </a>
+
+            <!-- hammbuger menu  -->
+             <button id="menu-button" type="button" aria-label="Open navigation menu"
+            aria-expanded="false"> 
+              
+                <img class="icons menu-icon" src="images/hamburger.svg" width="100" alt="Menu">
+                <img class="icons close-icon" src="images/xout.svg" width="100" alt="close-Menu">
+
+             </button>
+        </div>
+        <nav class="header-nav"> 
+             <ul id="menu-bar">
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="tile-types.html" title="Tile-types">Tile Types</a></li>
+                <li><a href="tile-sizes.html" title="tile-sizes">Tile Sizes</a></li>
+                <li><a href="measure.html" title="How to measure">How to measure</a></li>
+                <li><a href="calculator.html" title="tile calculator">Tile calculator</a></li>
+             </ul>
+        </nav>
+
+
+    </header>
+    <main> 
+        <!-- 2 hero section  -->
+        <section class="hero">
+            <!-- background picture -->
+           <div class="backgroundHero"> 
+                <picture>
+                    <source srcset="#" media="(min-width: 1000px)">
+                    <source srcset="#" media="(min-width: 500px)">
+                    <img src="images/small-background-image-hero.webp" width="1024" height="680" alt="Dark navy 3D isometric cubes with subtle blue highlights in a geometric pattern.">
+                </picture>
+           </div>
+
+            <!-- hero header -->
+            <h1>Plan Your Floor
+                <br>
+                with Confidence
+            </h1>
+
+            <!-- short site description  -->
+            <p>Tile Settings helps you choose the right tile,
+                <br>
+                measure your space, and calculate the tiles
+                <br>
+                you need for your project.
+            </p>
+
+            <!-- call to action (CTA)  -->
+            <a href="measure.html" class="cta-button" aria-label="Call to action">Get Started</a>
+
+
+        </section>
+
+        <section class="Planning"> 
+
+        <!-- 3 main planing journey -->
+            <h2>Your Tile Planning Journey</h2>
+
+            <div class="journeySteps">
+                <!-- first part  -->
+                 <article class="choose">
+                    <button class="iconbutton types" type="button" aria-label="Show option menu"
+            aria-expanded="false">
+                        <!-- button icon  -->
+                         <img class="iconesvg" src="images/tile-types.svg" width="100" alt="">
+                        <span class="iconText">Choose Your Tile</span>
+                        <span class="chevChoose">⌄</span>
+                    </button>
+
+                    <!-- the short descrption after click  -->
+                     <div class="content choosing"> 
+                        <h1>Explore Tile Information</h1>
+                            <p>
+                                Learn about different tile types and sizes to find the right fit
+                                <br>
+                                for your space.
+                            </p>
+                        <figure class="tileTypesAndSizes"> 
+                            <a href="tile-types.html">
+                                <img class="typesImage" src="images/tile-types-image.webp" alt="a collection of tiles">
+                                <span>Tile Types</span>
+                                <img class="next" src="images/next-svgrepo-com.svg" width="50" alt="next">
+                            </a>
+                        </figure>
+
+                        <figure class="tileTypesAndSizes"> 
+                            <a href="tile-sizes.html">
+                                <img class="typesImage" src="images/tile-sizes-image.webp" alt="a collection of tiles and measurements">
+                                <span>Tile sizes</span>
+                                <img class="next" src="images/next-svgrepo-com.svg" width="50" alt="next">
+                            </a>
+                        </figure>
+                     </div>
+                 </article>
+
+                 <article class="measure">
+                    <button class="iconbutton measurements" type="button" aria-label="Show option menu"
+            aria-expanded="false">
+                        <!-- button icon  -->
+                         <img class="iconesvg" src="images/measure-tape.svg" width="100" alt="">
+                        <span class="iconText">Measure Your Room</span>
+                        <span class="chevChoose">⌄</span>
+                    </button>
+
+                    <!-- the short descrption after click  -->
+                     <div class="content Measuring"> 
+                        <h1>Measuring your floor</h1>
+                            <p>
+                                Learn how to measure your space and calculate the area
+                                <br>
+                                you need to cover.
+                            </p>
+                        <figure class="tileTypesAndSizes measure"> 
+                            <a href="measure.html">
+                                <img class="typesImage" src="images/measure-image.webp" alt="a collection of tile measurements">
+                                <span>How to Measure</span>
+                                <img class="next" src="images/next-svgrepo-com.svg" width="50" alt="next">
+                            </a>
+                        </figure>
+                     </div>
+
+                 </article>
+
+                  <article class="learnCalc">
+                    <button class="iconbutton Calculations" type="button" aria-label="Show option menu"
+            aria-expanded="false">
+                        <!-- button icon  -->
+                         <img class="iconesvg"  src="images/calculator.svg" width="100" alt="calculator icon">
+                        <span class="iconText">Tile Calculation</span>
+                        <span class="chevChoose">⌄</span>
+                    </button>
+
+                    <!-- the short descrption after click  -->
+                     <div class="content calculating"> 
+                        <h1>Calculate Your Tile Needs</h1>
+                            <p>
+                                Estimate how many tiles you’ll need for your
+                                <br>
+                                space and avoid buying too much or too little.
+                            </p>
+                        <figure class="tileTypesAndSizes calculate">     
+                            <a href="tilecalculation.html">
+                                <img class="typesImage" src="images/calculator-image.webp" alt="a collection of tile measurements and a calculator">
+                                <span>How to Calculate</span>
+                                <img class="next" src="images/next-svgrepo-com.svg" width="50" alt="next">
+                            </a>
+                        </figure>    
+                     </div>
+
+                 </article>
+
+                  <article class="project">
+                    <button class="iconbutton plans" type="button" aria-label="Show option menu"
+            aria-expanded="false">
+                        <!-- button icon  -->
+                         <img class="iconesvg" src="images/plan.svg" width="100" alt="project plan icon">
+                        <span class="iconText">Start Your Project</span>
+                        <span class="chevChoose">⌄</span>
+                    </button>
+
+                    <!-- the short descrption after click  -->
+                     <div class="content Planer"> 
+                        <h1>Create a Project Plan</h1>
+                            <p>
+                                Plan your rooms, calculate tile quantities, and
+                                <br>
+                                estimte your project cost.
+                            </p>
+                        <figure class="tileTypesAndSizes project">     
+                            <a href="projectplan.html">
+                                <img class="typesImage" src="images/project-plan-image.webp" alt="project management tools">
+                                <span>Start a project</span>
+                                <img class="next" src="images/next-svgrepo-com.svg" width="50" alt="next">
+                            </a>
+                        </figure>    
+                     </div>
+
+                 </article>
+            </div>
+      </section>
+        <!-- <section class="planing"> -->
+
+        <!-- </section> -->
+        <!-- 3 explore section -->
+        <!-- <section class="explore"> -->
+
+        <!-- </section> -->
+        <!-- 4 calculator part  -->
+        <section class="calculate"> 
+            <img src="images/calculator.svg" alt="calculator icon">
+
+            <div class="texts">
+                <h1>Ready to Calculate?</h1>
+                <p>
+                    Use our simple calculator to find out
+                    <br>
+                    how many tiles and cartons you'll need
+                    <br>
+                    for your project.
+                </p>
+
+                <a href="calculator.html" title="calculator">Open Calculator</a>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="sociallogo"> 
+            <div class="logo">  
+                <img class="logo-image footerLogo" src="images/logo-image.svg" width="200" alt="Tile settings logo image, in svg format">
+                <h1>Tile Settings</h1>
+            </div>
+
+            <div class="socials"> 
+                <img id="facebook" src="images/facebook.svg" alt="facebook icon">
+                <img id="instagram" src="images/instagram.svg" alt="instagram icon">
+            </div>
+         </div>
+         <p>&copy; <span id="currentyear"></span> Tile Settings 🍓 Divine Kalu 🍓 Nigeria</p>
+        <p id="lastModified"></p>
+
+
+    </footer>
+</body>
+</html>

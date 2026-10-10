@@ -24,8 +24,19 @@ a {
 }
 
 body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
     font-family: var(--body-font);
     background-color: var(--background-color);
+}
+
+img {
+max-width: 100%;
+}
+
+.hero {
+    position: relative;
 }
 
 .hero img {
@@ -38,33 +49,45 @@ body {
     font-family: var(--header-font);
     position: absolute;
     color: var(--secondary-color);
-    top: 100px;
+    top: 10px;
     padding: 1rem;
     margin: 1rem;
-
     font-size: 3rem;
+    min-width: 50vw;
 }
 
 .hero p {
     position: absolute;
     color: var(--background-color);
-    top: 240px;
+    top: 150px;
     padding: 1rem;
     margin: 1rem;
     font-size: 1.2rem;
+    line-height: 1.2;
 }
 
 .hero a {
     position: absolute;
     color: var(--primary-color--darker);
-    bottom: 200px;
+    bottom: 340px;
     padding: 1rem;
     margin: 0 2.2rem;
     font-size: 1.2rem;
     background-color: #f7e1b3;
     border-radius: 5px;
     font-weight: 500;
+    
 }
+
+.hero .cta-button:hover,
+.hero .cta-button:focus-visible {
+        color: var(--secondary-color);
+        background-color: var(--primary-color--);
+        transform: translateY(-3px);
+        transition: 0.5s ease;
+        scale: 3px;
+}
+
 
 .logo-image {
     height: 3.5rem;
@@ -155,7 +178,7 @@ body {
 	text-align: center;
 	font-weight: 700;
     transition: 0.7s ease;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color--);
     border-radius: 20px;
     border: 2px solid var(--primary-color--);
     position: absolute;
@@ -183,8 +206,9 @@ body {
 
 #menu-bar a {
     padding: 1rem 5rem;
-    color: var(--primary-color--);
+    color: var(--background-color);
     transition: 0.7s ease;
+    
 }
 
 #menu-bar a:hover {
@@ -264,15 +288,19 @@ body {
     color: var(--primary-color--darker);
 }
 
+.tileTypesAndSizes a:hover {
+        background-color: #fff8df;
+}
+
 .measure a {
     gap: 2.5rem;
 }
 
-.calculate a {
+.calc a {
     gap: 1.6rem;
 }
 
-.project a {
+.projects a {
     gap: 2.5rem;
 }
 
@@ -365,39 +393,359 @@ figure img {
 }
 
 footer {
-    background-color: var(--primary-color--);
-}
-
-.sociallogo img {
-    height: 2rem;
-    width: auto;
-    margin-top: 1rem;
+        padding: 2rem 6% 1rem;
+        background-color: var(--primary-color--);
 }
 
 .sociallogo {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: .5rem;
-    
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 0 1.5rem;
 }
- .sociallogo h1 {
-    font-size: 1.5rem;
-    margin-top: 1.1rem;
-    color: var(--secondary-color);
- }
 
- .logo {
+.logo {
     display: flex;
- }
+    align-items: center;
+    gap: 0.8rem;
+}
 
- footer p {
-    text-align: center;
-    padding: .2rem;
+.sociallogo img {
+    height: 2.5rem;
+    width: auto;
+    margin-top: 0;
+}
+
+.sociallogo h1 {
+    margin-top: 0;
+    font-family: var(--header-font);
+    font-size: 1.5rem;
     color: var(--secondary-color);
- }
+}
 
- 
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
 
+.socials img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 
+.socials img:hover {
+    transform: translateY(-3px);
+}
+
+footer p {
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Hero image and text */
+
+    .hero img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+
+    .hero h1 {
+        top: 2rem;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 1rem;
+        font-size: clamp(2.1rem, 7vw, 2.5rem);
+        line-height: 1.2;
+    }
+
+    .hero p {
+        top: 8rem;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 1rem;
+        font-size: clamp(0.9rem, 3.8vw, 1.1rem);
+        line-height: 1.5;
+    }
+
+    .hero a {
+        bottom: 320px;
+        left: 1rem;
+        margin: 0;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        max-width: calc(100% - 2rem);
+    }
+
+    /* Header */
+
+    .logo-image {
+        height: 2.7rem;
+        margin-top: 0.5rem;
+    }
+
+    .headNav h1 {
+        margin-top: 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .menu-icon,
+    .close-icon {
+        right: 10px;
+        height: 2.5rem;
+    }
+
+    /* Dropdown navigation */
+
+    #menu-bar {
+        top: 65px;
+        right: 10px;
+        gap: 0.5rem;
+        width: min(260px, calc(100vw - 20px));
+        max-width: calc(100vw - 20px);
+        height: auto;
+        max-height: calc(100vh - 85px);
+        overflow-y: auto;
+        padding: 0.75rem;
+    }
+
+    #menu-bar a {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.95rem;
+        overflow-wrap: anywhere;
+    }
+
+    /* Planning section */
+
+    .Planning h2 {
+        margin: 1rem 0.5rem;
+        font-size: 1.35rem;
+        line-height: 1.4;
+    }
+
+    .content {
+        margin: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    .journeySteps {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0 0.5rem;
+    }
+
+    .journeySteps > * {
+        max-width: 100%;
+    }
+
+    /* Tile cards */
+
+    .tileTypesAndSizes {
+        width: 100%;
+        margin: 0.75rem 0;
+        border-radius: 10px;
+    }
+
+    .tileTypesAndSizes a {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .typesImage {
+        flex: 0 0 85px;
+        width: 85px;
+        height: 85px;
+        border-radius: 9px 0 0 9px;
+    }
+
+    .tileTypesAndSizes a > * {
+        min-width: 0;
+    }
+
+    .iconText {
+        flex: 1;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .iconbutton {
+        justify-content: center;
+        gap: 0.5rem;
+        max-width: 100%;
+    }
+
+    .measure a,
+    .calc a,
+    .projects a {
+        gap: 0.65rem;
+    }
+
+    .measurements,
+    .Calculations,
+    .plans {
+        gap: 0.5rem;
+    }
+
+    .iconesvg {
+        padding: 0.5rem;
+    }
+
+    .chevChoose {
+        width: 16px;
+    }
+
+    figure img {
+        width: 2.8rem;
+    }
+
+    /* Calculator section */
+
+    .calculate {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .calculate img {
+        width: 100px;
+        margin: 0;
+        padding: 0.75rem;
+    }
+
+    .texts {
+        width: 100%;
+        margin-top: 0;
+        padding: 0.25rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .texts p {
+        padding: 0.5rem 0;
+    }
+
+    .texts a {
+        font-size: 0.95rem;
+    }
+
+    /* Footer */
+
+    .sociallogo {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .sociallogo h1 {
+        font-size: 1.1rem;
+    }
+
+    .sociallogo img {
+        height: 1.7rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .hero img {
+        height: 600px;
+    }
+
+    .hero h1 {
+        top: 2rem;
+        padding: 0.75rem;
+        font-size: 1.65rem;
+    }
+
+    .hero p {
+        top: 8rem;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .hero a {
+        /* bottom: rem;  */
+        left: 0.75rem;
+        padding: 0.7rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .headNav h1 {
+        font-size: 1rem;
+    }
+
+    .logo-image {
+        height: 2.3rem;
+    }
+
+    .menu-icon,
+    .close-icon {
+        right: 8px;
+        height: 2.2rem;
+    }
+
+    .Planning h2 {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        margin: 0.5rem;
+        padding: 0.65rem;
+    }
+
+    .typesImage {
+        flex-basis: 70px;
+        width: 70px;
+        height: 75px;
+    }
+
+    .tileTypesAndSizes a {
+        gap: 0.5rem;
+    }
+
+    .iconText {
+        font-size: 0.8rem;
+    }
+
+    .iconesvg {
+        padding: 0.35rem;
+    }
+
+    figure img {
+        width: 2.3rem;
+    }
+
+    .chevChoose {
+        width: 14px;
+    }
+
+    .sociallogo h1 {
+        font-size: 0.95rem;
+    }
+
+    .sociallogo img {
+        height: 1.5rem;
+    }
+}
 
 

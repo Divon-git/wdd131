@@ -1,0 +1,639 @@
+
+/*
+MEASURE PAGE
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #282C38;
+    --dark-color: #0d0f16;
+    --section-background: #e1e5eb;
+    --background-color: #ffffff;
+    --secondary-color: #ffdf75;
+    --heading-font: "PT Serif Caption", serif;
+    --body-font: "Nova Slim", sans-serif;
+    --eyebrow-color: #49628b;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--primary-color);
+    background: var(--background-color);
+    line-height: 1.7;
+    background-color: var(--background-color);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--background-color);
+    
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.section-container {
+    width: min(1100px, 90%);
+    margin-inline: auto;
+}
+
+/* HEADER */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 5%;
+    background: var(--primary-color);
+    color: var(--background-color);
+}
+
+.site-header h1 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-shrink: 0;
+    color: var(--background-color);
+    font-family: var(--heading-font);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.main-nav a {
+    padding: 0.2rem 0.1rem;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    color: var(--background-color);
+    text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible,
+.main-nav a[aria-current="page"] {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-4px);
+        transition: 0.5s ease;
+}
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    border: 0;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #a97800;
+    outline-offset: 3px;
+}
+
+.primary-button {
+    background: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+.primary-button:hover {
+    background: #f5cf50;
+}
+
+.secondary-button {
+    border: 1px solid #c9cdd5;
+    background: var(--background-color);
+    color: var(--primary-color);
+}
+
+.eyebrow {
+    margin-bottom: 0.7rem;
+    color: var(--eyebrow-color);
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.darker {
+    color: #59729e;
+}
+/* HERO */
+
+.measure-hero {
+    display: flex;
+    align-items: center;
+    min-height: 450px;
+    padding: 4rem 5%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(13, 15, 22, 0.9),
+            rgba(13, 15, 22, 0.6)
+        ),
+        url("../images/measure-image.webp") center / cover no-repeat;
+    color: var(--background-color);
+}
+
+.hero-content {
+    width: min(650px, 100%);
+}
+
+.measure-hero .eyebrow {
+    color: var(--secondary-color);
+}
+
+.measure-hero h1 {
+    margin-bottom: 1rem;
+}
+
+.measure-hero p:not(.eyebrow) {
+    max-width: 570px;
+    margin-bottom: 1.5rem;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 0.8rem;
+}
+
+.section-heading p:last-child {
+    margin-bottom: 0;
+}
+
+/* MEASUREMENT STEPS */
+
+.steps-section {
+    padding-block: 4rem;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+}
+
+.step-card {
+    padding: 1.5rem;
+    border: 1px solid #d7dbe2;
+    border-radius: 14px;
+    background: var(--background-color);
+    box-shadow: 0 5px 18px rgba(13, 15, 22, 0.06);
+}
+
+.step-number {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    background: var(--secondary-color);
+    color: var(--dark-color);
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.step-card h3 {
+    margin-bottom: 0.7rem;
+}
+
+.step-card p {
+    margin-bottom: 0;
+    font-size: 0.94rem;
+}
+
+/* AREA FORMULA */
+
+.formula-section {
+    padding: 4rem 5%;
+    background: var(--section-background);
+}
+
+.formula-content {
+    width: min(800px, 100%);
+    margin-inline: auto;
+    text-align: center;
+}
+
+.formula-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.formula {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: var(--primary-color);
+    color: var(--background-color);
+    font-family: var(--heading-font);
+    font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+.example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1.2rem;
+    border: 1px solid #d0d4dc;
+    border-radius: 12px;
+    background: var(--background-color);
+    font-size: 1.1rem;
+}
+
+.example strong {
+    color: #755700;
+    font-size: 1.4rem;
+}
+
+.formula-note {
+    margin-bottom: 0;
+    font-size: 0.92rem;
+}
+
+/* ROOM MEASUREMENT TOOL */
+
+.measurement-tool {
+    padding-block: 4rem;
+}
+
+.measurement-form {
+    width: min(700px, 100%);
+    margin: 0 auto;
+    padding: 1.5rem;
+    border: 1px solid #d7dbe2;
+    border-radius: 14px;
+    background: #f7f8fa;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 1.2rem;
+}
+
+.form-field label {
+    font-weight: bold;
+}
+
+.form-field input {
+    width: 100%;
+    min-width: 0;
+    padding: 0.85rem;
+    border: 1px solid #b8bec9;
+    border-radius: 8px;
+    background: var(--background-color);
+    color: var(--primary-color);
+    font: inherit;
+}
+
+.dimensions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0 1rem;
+}
+
+.measurement-form .button {
+    width: 100%;
+}
+
+.privacy-note {
+    margin: 0.9rem 0 0;
+    color: #505766;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.form-message {
+    min-height: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.form-message.error {
+    color: #a11919;
+}
+
+.form-message.success {
+    color: #17663a;
+}
+
+/* SAVED ROOMS */
+
+.saved-rooms {
+    width: min(800px, 100%);
+    margin: 2rem auto 0;
+}
+
+.saved-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.saved-heading h3 {
+    font-size: 1.4rem;
+}
+
+.saved-heading .button {
+    width: auto;
+    font-size: 0.85rem;
+}
+
+.empty-message {
+    padding: 1.5rem;
+    border: 1px dashed #b8bec9;
+    border-radius: 10px;
+    color: #505766;
+    text-align: center;
+}
+
+.saved-rooms-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.room-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem;
+    border: 1px solid #d7dbe2;
+    border-radius: 12px;
+    background: var(--background-color);
+}
+
+.room-card h4 {
+    margin-bottom: 0.5rem;
+    font-family: var(--heading-font);
+    font-size: 1.15rem;
+    overflow-wrap: anywhere;
+}
+
+.room-card p {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.room-card .room-area {
+    margin-top: 0.5rem;
+    color: #755700;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.delete-room-button {
+    flex-shrink: 0;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid #b42323;
+    border-radius: 7px;
+    background: var(--background-color);
+    color: #a11919;
+    font: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.delete-room-button:hover {
+    background: #fff0f0;
+}
+
+.total-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: var(--background-color);
+}
+
+.total-area strong {
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+}
+
+/* FINAL CTA */
+
+.tile-planning-tip {
+    padding: 4rem 5%;
+    background: var(--section-background);
+}
+
+.tip-content {
+    width: min(800px, 100%);
+    margin-inline: auto;
+    text-align: center;
+}
+
+.tip-content h2 {
+    margin-bottom: 1rem;
+}
+
+.tip-content p:not(.eyebrow) {
+    margin-bottom: 1.5rem;
+}
+
+/* FOOTER */
+
+.site-footer {
+    padding: 1.5rem 5%;
+    background: var(--dark-color);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.site-footer a {
+    text-decoration: none;
+}
+
+.site-footer p {
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+}
+
+.brand span {
+    color: var(--secondary-color);
+}
+
+/* TABLET */
+
+@media screen and (min-width: 600px) {
+    .steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dimensions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .measure-hero {
+        min-height: 480px;
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1000px) {
+    .steps-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .measure-hero {
+        min-height: 520px;
+        padding-inline: max(5%, calc((100% - 1100px) / 2));
+    }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 599px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+        padding: 1rem 5%;
+    }
+
+    .main-nav {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 0.4rem 1rem;
+    }
+
+    .main-nav a {
+        font-size: 0.82rem;
+    }
+
+    .measure-hero {
+        min-height: 400px;
+        padding: 3rem 5%;
+        background-position: center;
+    }
+
+    .steps-section,
+    .measurement-tool {
+        padding-block: 3rem;
+    }
+
+    .section-heading {
+        text-align: left;
+    }
+
+    .formula-section,
+    .tile-planning-tip {
+        padding-block: 3rem;
+    }
+
+    .measurement-form {
+        padding: 1rem;
+    }
+
+    .room-card {
+        flex-direction: column;
+    }
+
+    .delete-room-button {
+        align-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .measure-hero {
+        min-height: 360px;
+    }
+
+    .saved-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .total-area {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+

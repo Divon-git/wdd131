@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to measure a room in metres, calculate floor area, and save room measurements before buying tiles.">
+    <meta name="author" content="Divine Kalu">
+    <title>How to Measure a Room | Tile Settings</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles/measure.css">
+    <script src="scripts/measure.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="Tile Settings home">
+            <img src="images/logo-image.svg" alt="" width="45" height="45">
+            <h1>Tile Settings</h1>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="tile-types.html">Tile Types</a>
+            <a href="tile-sizes.html">Tile Sizes</a>
+            <a href="measure.html" aria-current="page">How to Measure</a>
+            <a href="calculator.html">Calculator</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="measure-hero">
+            <div class="hero-content">
+                <p class="eyebrow">Get your measurements right</p>
+                <h1>Measure Your Room with Confidence</h1>
+                <p>
+                    Before choosing your tiles, find out how much floor space
+                    you need to cover. Follow this simple guide, calculate
+                    your room's area, and save your measurements for later.
+                </p>
+                <a class="button primary-button" href="#room-measurements">
+                    Measure My Room
+                </a>
+            </div>
+        </section>
+
+        <section class="steps-section section-container">
+            <div class="section-heading">
+                <p class="eyebrow">Four simple steps</p>
+                <h2>How to Measure a Room</h2>
+                <p>
+                    You only need a tape measure, a place to record your
+                    numbers, and a little care.
+                </p>
+            </div>
+
+            <div class="steps-grid">
+                <article class="step-card">
+                    <div class="step-number" aria-hidden="true">01</div>
+                    <h3>Gather Your Tools</h3>
+                    <p>
+                        Get a tape measure, a pen, and paper or use the
+                        measurement saver below to record your results.
+                    </p>
+                </article>
+
+                <article class="step-card">
+                    <div class="step-number" aria-hidden="true">02</div>
+                    <h3>Measure the Length</h3>
+                    <p>
+                        Measure one side of the floor from one wall to the
+                        opposite wall. Record the result in metres.
+                    </p>
+                </article>
+
+                <article class="step-card">
+                    <div class="step-number" aria-hidden="true">03</div>
+                    <h3>Measure the Width</h3>
+                    <p>
+                        Measure the other side of the floor, from one wall
+                        to the opposite wall. Record this number too.
+                    </p>
+                </article>
+
+                <article class="step-card">
+                    <div class="step-number" aria-hidden="true">04</div>
+                    <h3>Calculate the Area</h3>
+                    <p>
+                        Multiply the length by the width to find the floor
+                        area in square metres (m²).
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="formula-section">
+            <div class="formula-content">
+                <p class="eyebrow darker">The simple formula</p>
+                <h2>How Do You Calculate Floor Area?</h2>
+                <div class="formula">
+                    Area = Length × Width
+                </div>
+                <p>
+                    For example, a room that is 5 metres long and 4 metres
+                    wide has an area of 20 square metres.
+                </p>
+                <div class="example">
+                    <span>5 m × 4 m</span>
+                    <strong>= 20 m²</strong>
+                </div>
+                <p class="formula-note">
+                    This calculation assumes your room has a rectangular
+                    floor. For an irregularly shaped room, divide the floor
+                    into smaller rectangles, calculate each area, and add
+                    them together.
+                </p>
+            </div>
+        </section>
+
+        <section class="measurement-tool section-container" id="room-measurements">
+            <div class="section-heading">
+                <p class="eyebrow">Your personal measurement list</p>
+                <h2>Calculate and Save Your Rooms</h2>
+                <p>
+                    Enter each room below. Your measurements will be saved
+                    in this browser so you can revisit them later.
+                </p>
+            </div>
+
+            <form id="measurementForm" class="measurement-form">
+                <div class="form-field">
+                    <label for="roomName">Room name</label>
+                    <input
+                        type="text"
+                        id="roomName"
+                        name="roomName"
+                        placeholder="e.g. Living Room"
+                        maxlength="50"
+                        required
+                    >
+                </div>
+
+                <div class="dimensions-grid">
+                    <div class="form-field">
+                        <label for="roomLength">Length (metres)</label>
+                        <input
+                            type="number"
+                            id="roomLength"
+                            name="roomLength"
+                            placeholder="e.g. 5"
+                            min="0.01"
+                            max="1000"
+                            step="any"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="roomWidth">Width (metres)</label>
+                        <input
+                            type="number"
+                            id="roomWidth"
+                            name="roomWidth"
+                            placeholder="e.g. 4"
+                            min="0.01"
+                            max="1000"
+                            step="any"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <button class="button primary-button" type="submit">
+                    Calculate and Save Room
+                </button>
+
+                <p class="privacy-note">
+                    Your saved rooms stay in this browser's local storage.
+                </p>
+            </form>
+
+            <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+
+            <section class="saved-rooms" aria-labelledby="savedRoomsHeading">
+                <div class="saved-heading">
+                    <h3 id="savedRoomsHeading">Your Saved Rooms</h3>
+                    <button
+                        id="clearRoomsButton"
+                        class="button secondary-button"
+                        type="button"
+                    >
+                        Clear All
+                    </button>
+                </div>
+
+                <p id="emptyMessage" class="empty-message">
+                    You haven't saved any rooms yet. Add your first room above.
+                </p>
+
+                <div id="savedRoomsList" class="saved-rooms-list"></div>
+
+                <div class="total-area">
+                    <span>Total floor area</span>
+                    <strong id="totalArea">0.00 m²</strong>
+                </div>
+            </section>
+        </section>
+
+        <section class="tile-planning-tip">
+            <div class="tip-content">
+                <p class="eyebrow">Before buying tiles</p>
+                <h2>Remember to Allow for Extra Tiles</h2>
+                <p>
+                    Your room's floor area is a starting point, not always
+                    the exact amount of tiles to purchase. Cutting, breakage,
+                    the tile layout, and the coverage stated on each carton
+                    can affect the quantity you need.
+                </p>
+                <a class="button primary-button" href="calculator.html">
+                    Go to the Tile Calculator
+             </a>
+
+
+
+
+            </div>
+        </section>
+    </main>
+
+     <footer class="site-footer">
+        <a class="brand footer-brand" href="index.html">
+            <img src="images/logo-image.svg"
+                 alt="tile settings logo"
+                 width="40"
+                 height="40">
+            <span>Tile Settings</span>
+        </a>
+
+         <p>&copy; <span id="currentyear"></span> Tile Settings 🍓 Divine Kalu 🍓 Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

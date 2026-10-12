@@ -38,12 +38,7 @@ menuButton.addEventListener("click", function(){
         "aria-label",
         isOpen ? "Open navigation menu" : "Close navigation menu"
     );
-    // const open = menuButton.getAttribute("aria-expanded") === "true";
-
-    // menuIcon.hidden = open;
-    // close.hidden = !open;
-
-    // menuButton.setAttribute("aria-expanded", !open);
+   
 });
 
 function showMenu (button, aVariable) {
